@@ -1,7 +1,16 @@
 const nav = document.querySelector(".navbar");
 const navBarToggler = document.querySelector(".navbar-toggler");
+const navLinks = document.querySelectorAll('.nav-link');
 
 let containsShadow = false;
+
+navLinks.forEach(link=>{
+    link.addEventListener('click', ()=>{
+        navLinks.forEach(navLink => navLink.classList.remove('active'));
+
+        link.classList.add('active');
+    })
+});
 
 navBarToggler.addEventListener('click', ()=>{
     if(containsShadow==false)
