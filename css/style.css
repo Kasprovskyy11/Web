@@ -21,6 +21,7 @@ body {
 }
 
 nav {
+  transition: 0.6s;
   font-size: 20px;
 }
 nav .navbar-brand {
@@ -105,6 +106,36 @@ section .aboutus-text {
 section .aboutus-text p {
   width: 80%;
 }
+section .card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 80%;
+}
+section .card .card-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  margin: 5px 25% 0 25%;
+}
+section .card .card-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .card h5 {
+  font-size: 15px;
+}
+section .card .left {
+  left: -10%;
+}
+section .card .right {
+  right: -10%;
+}
 
 @media (max-width: 992px) {
   .logo {
@@ -117,5 +148,32 @@ section .aboutus-text p {
   }
   p {
     font-size: 22px;
+  }
+}
+@media (min-width: 576px) {
+  section .card .card-img {
+    width: 70px;
+    margin: 0 25% 0 25%;
+  }
+  section .card h5 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 80%;
+  }
+  .card h5 {
+    font-size: 30px;
+  }
+  section .card .card-img {
+    width: 150px;
+    margin: 0 25% 0 25%;
   }
 }/*# sourceMappingURL=style.css.map */
