@@ -3,6 +3,7 @@ const navBarToggler = document.querySelector(".navbar-toggler");
 const navLinks = document.querySelectorAll('.nav-link');
 const navBarCollapse = document.querySelector('.collapse');
 
+let shouldBeShadow = false;
 let containsShadow = false;
 
 navLinks.forEach(link=>{
@@ -11,6 +12,8 @@ navLinks.forEach(link=>{
 
         link.classList.add('active');
         navBarCollapse.classList.toggle('show');
+        removeShadow();
+        containsShadow = false;
     })
 });
 
